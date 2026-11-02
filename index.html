@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070c13">
+  <meta name="description" content="Mouse Combo 高精度鼠标 / 键盘宏：每一步独立计时、鼠标侧键开关键、内嵌宏库、0.001 ms 时间步进。Windows 安装包下载。">
+  <title>Mouse Combo · 高精度鼠标 / 键盘宏</title>
+  <link rel="icon" href="assets/mousecombo_32.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./">
+      <img src="assets/mousecombo_64.png" alt="Mouse Combo 图标">
+      <strong>Mouse <span>Combo</span></strong>
+    </a>
+    <div class="lang-switch" aria-label="Language / 言語">
+      <button type="button" data-lang="zh" class="active">中文</button>
+      <button type="button" data-lang="ja">日本語</button>
+      <button type="button" data-lang="en">English</button>
+    </div>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="#features">功能</a>
+      <a href="#timing">每步计时</a>
+      <a href="#hotkeys">侧键开关键</a>
+      <a href="guide.html">安装与风险</a>
+      <a class="nav-download" href="#download">下载安装包</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow"><i></i> Windows 10 / 11 · 安装版 <span data-release-version>v1.5.1</span></div>
+        <h1>精确到<br><span>每一步</span>的宏</h1>
+        <p class="hero-lead">
+          Mouse Combo 是一款本地运行的鼠标宏与键盘全键连点工具。每个步骤独立设置按住时长与间隔，
+          鼠标侧键也能作为开关键，宏文件直接显示在主界面左侧。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="downloads/MouseCombo-Setup-1.5.1.exe" download data-download>
+            ↓ 下载 Windows 安装包
+          </a>
+          <a class="btn btn-ghost" href="guide.html">阅读安装与风险说明</a>
+        </div>
+        <div class="hero-meta">
+          <span>0.001 ms 时间步进</span>
+          <span>中文 / 日本語 / English 界面</span>
+          <span>按用户安装，无需管理员</span>
+          <span>本地离线，不收集数据</span>
+        </div>
+      </div>
+      <div class="hero-shot">
+        <img src="assets/main_populated.png" alt="Mouse Combo 主界面：左侧宏库、每步独立计时和宏步骤表格">
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="section-head">
+        <div class="kicker">FEATURES</div>
+        <h2>该有的都有，而且都在同一个窗口里</h2>
+        <p>不用在设置窗口、宏库管理器和文件夹之间来回切换。开关键、宏文件、每一步的时间，都在主界面直接操作。</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <div class="feature-icon">◷</div>
+          <h3>每一步独立计时 <span class="new">NEW</span></h3>
+          <p>每个鼠标/键盘步骤都有自己的按住时长和间隔。表格逐行显示，选中后直接修改，不再使用全宏统一时间。</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">◉</div>
+          <h3>鼠标侧键开关键 <span class="new">NEW</span></h3>
+          <p>侧键 4 / 5 可直接录制为开始/停止键，也支持 Ctrl / Alt / Shift 组合；匹配的侧键会被吞掉，不触发网页前进后退。</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">▤</div>
+          <h3>左侧内嵌宏库</h3>
+          <p>所有命名、分类的宏直接按分类显示在窗口左侧。单击即切换；保存、删除、新建都在同一块面板完成。界面支持中文 / 日本語 / English。</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">⌨</div>
+          <h3>键盘全键连点</h3>
+          <p>支持任意普通键与 Ctrl / Alt / Shift 组合：字母、数字、F1–F24、方向键、小键盘、符号键、媒体键等。</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">μ</div>
+          <h3>0.001 ms 计时步进</h3>
+          <p>时间输入、存储和等待调度以 1 µs 为步进，内部使用整数纳秒和绝对 deadline，减少累计漂移。</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">◐</div>
+          <h3>按住循环 / 按下切换</h3>
+          <p>同一个开关键支持两种触发方式：按住时运行、松开停止；或者按一次开始、再按一次停止。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="split" id="timing">
+      <div>
+        <div class="kicker">PER-STEP TIMING</div>
+        <h2>每一下，都有自己的节奏</h2>
+        <p>
+          不再用一个全局间隔套用整段宏。选中任意步骤，在表格上方修改「按住」和「间隔」，点应用即可；
+          键盘组合键、鼠标左/右/中/侧键和滚轮各自独立。
+        </p>
+        <ul class="checklist">
+          <li>表格逐行显示每一步的按住和间隔</li>
+          <li>滚轮步骤只显示/编辑间隔</li>
+          <li>新步骤继承当前选中步骤的时间</li>
+          <li>单轮总时长与理论轮/秒实时计算</li>
+          <li>所有时间都可以精确到 0.001 ms</li>
+        </ul>
+      </div>
+      <div class="demo-panel" aria-label="每步独立计时示意">
+        <div class="demo-top"><span>宏步骤 · 5 步</span><strong>每一步独立</strong></div>
+        <div class="step-table">
+          <div class="step-row head"><span>#</span><span>动作</span><span style="text-align:right">按住 ms</span><span style="text-align:right">间隔 ms</span></div>
+          <div class="step-row"><span class="num">01</span><span class="action">左键单击</span><span class="time">5.000</span><span class="time hot">50.000</span><div class="lane" style="grid-column:2 / 5"><i style="width:22%"></i></div></div>
+          <div class="step-row"><span class="num">02</span><span class="action">按键 Q</span><span class="time">33.333</span><span class="time hot">44.444</span><div class="lane" style="grid-column:2 / 5"><i style="width:31%"></i></div></div>
+          <div class="step-row"><span class="num">03</span><span class="action">中键单击</span><span class="time">33.333</span><span class="time hot">44.444</span><div class="lane" style="grid-column:2 / 5"><i style="width:31%"></i></div></div>
+          <div class="step-row"><span class="num">04</span><span class="action">滚轮向上</span><span class="time">—</span><span class="time hot">300.000</span><div class="lane" style="grid-column:2 / 5"><i style="width:83%"></i></div></div>
+          <div class="step-row"><span class="num">05</span><span class="action">右键单击</span><span class="time">7.890</span><span class="time hot">123.456</span><div class="lane" style="grid-column:2 / 5"><i style="width:42%"></i></div></div>
+        </div>
+        <div class="demo-total"><span>单轮总时长</span><strong>641.900 ms</strong></div>
+      </div>
+    </section>
+
+    <section class="split" id="hotkeys" style="grid-template-columns:1.12fr .88fr">
+      <div class="mouse-visual">
+        <h3>开关键，不一定是键盘键</h3>
+        <p>点击「更改」后直接按鼠标侧键即可录制，不需要额外驱动。</p>
+        <div class="hook-row">
+          <span class="pill"><strong>侧键 4</strong> · 后退</span>
+          <span class="pill"><strong>侧键 5</strong> · 前进</span>
+          <span class="pill"><strong>Ctrl</strong> + 侧键</span>
+          <span class="pill"><strong>F6</strong> · 键盘</span>
+        </div>
+        <div class="side-keys">
+          <div class="keycap">鼠标侧键 4<small>按住循环 / 按下切换</small></div>
+          <div class="keycap">鼠标侧键 5<small>匹配时全局吞掉</small></div>
+        </div>
+      </div>
+      <div>
+        <div class="kicker">MOUSE SIDE BUTTONS</div>
+        <h2>侧键也能开始和停止</h2>
+        <p>
+          全局低级鼠标钩子会把 XBUTTON1 / XBUTTON2 映射成可配置开关键，支持与 Ctrl / Alt / Shift 组合。
+          匹配后该侧键不会继续传给浏览器或游戏，避免误触后退/前进。
+        </p>
+        <ul class="checklist">
+          <li>键盘钩子与鼠标钩子同时工作</li>
+          <li>按住循环：按下开始、松开停止</li>
+          <li>按下切换：按一下开始、再按一下停止</li>
+          <li>录制时同样支持侧键</li>
+          <li>宏自己发出的注入输入不会误触发开关键</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div>
+        <div class="kicker" style="color:var(--accent);font-size:12px;letter-spacing:.15em;font-weight:800">DOWNLOAD</div>
+        <h2>下载 Mouse Combo <span data-release-version>v1.5.1</span></h2>
+        <p>Windows 10 / 11，64 位。标准安装包，按当前用户安装，不需要管理员权限。安装前会完整显示安装说明与风险声明。</p>
+        <div class="release-grid">
+          <div><span>安装包</span><strong>MouseCombo-Setup-1.5.1.exe</strong></div>
+          <div><span>大小</span><strong data-release-size>15.1 MB</strong></div>
+          <div><span>SHA256</span><strong data-release-hash>3CC34E606D1CB331142DEFF6A88C576242E638EA9453C7A22F34A2EBD28C06A6</strong></div>
+        </div>
+      </div>
+      <div class="download-actions">
+        <a class="btn btn-primary" href="downloads/MouseCombo-Setup-1.5.1.exe" download data-download>↓ 下载安装包</a>
+        <a class="btn btn-ghost" href="guide.html">安装与风险说明</a>
+        <span class="download-meta">项目自签名证书（非公共 CA）· 首次运行可能提示未知发布者</span>
+        <a class="download-meta" href="downloads/MouseCombo-CodeSigning.cer">下载公钥证书</a>
+        <a class="download-meta" href="guide.html#signing">签名与验证说明</a>
+      </div>
+    </section>
+
+    <section class="risk" id="risk">
+      <h2>安装前必读 · 风险声明</h2>
+      <p>
+        本程序会模拟真实鼠标点击和键盘按键，并安装全局键盘/鼠标钩子。它可能在真实程序中造成误操作、数据丢失、
+        账号处罚、平台规则冲突或法律风险。请先在安全环境测试，并自行确认使用场景合法合规。
+      </p>
+      <ul>
+        <li>可能违反法律法规、平台服务条款或雇主规定；不得用于作弊、欺诈、绕过风控或其他违法用途。</li>
+        <li>模拟输入会真实生效，可能误点、误删、误发消息、误付款，通常无法撤销。</li>
+        <li>可能触发平台封禁、账号/虚拟资产损失，或影响第三方设备与数据。</li>
+        <li>全局钩子可能与反作弊、安全软件、远程桌面、输入法或其他宏工具冲突。</li>
+        <li>配置和宏文件以明文保存在本机；卸载会删除本机数据，请自行备份。</li>
+        <li>0.001 ms 是输入/计时步进，不代表真实物理输入能精确到微秒。</li>
+      </ul>
+      <p>
+        完整说明包括法律与平台规则、误操作、账号与第三方、系统兼容性、权限、隐私、时序、硬件、
+        第三方组件与无担保责任等章节，请阅读
+        <a href="guide.html">安装引导与完整风险声明</a>。
+        安装程序的许可页也会完整显示同一份内容；必须选择“我接受”才能继续安装。
+      </p>
+      <p class="final-caption">如不同意上述任何内容，请立即停止安装和使用，并删除本程序及其配置文件。</p>
+      <div class="final-warning">本项目仅供学习参考，不得用于任何违法行为</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>Mouse Combo v1.5.1 · 本地运行 · 不收集数据</span>
+      <span><a href="guide.html">安装与风险</a> · <a href="https://github.com/hutao48/mouse-combo" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="site-i18n.js"></script>
+</body>
+</html>
