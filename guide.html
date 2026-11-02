@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070c13">
+<title>安装与风险声明 · Mouse Combo</title>
+<link rel="icon" href="assets/mousecombo_32.png">
+<style>
+  :root { color-scheme: dark; --bg:#070c13; --card:#101a28; --card2:#0d1622; --text:#f1f6fc; --muted:#aebdd0; --faint:#7f91a8; --accent:#45e0a8; --border:#22334a; --border2:#182638; --red:#ff4054; --red-bg:#2a1117; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:radial-gradient(circle at 20% -10%,rgba(69,224,168,.10),transparent 32rem),var(--bg); color:var(--text); font-family:"Microsoft YaHei UI","Yu Gothic UI","Segoe UI",sans-serif; line-height:1.8; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { color:#8df7d2; }
+  .site-header { width:min(980px,calc(100% - 40px)); margin:0 auto; padding:22px 0; display:flex; align-items:center; gap:14px; flex-wrap:wrap; border-bottom:1px solid var(--border2); }
+  .brand { display:flex; gap:10px; align-items:center; color:var(--text); font-weight:900; }
+  .brand img { width:36px; height:36px; border-radius:10px; }
+  .lang-switch { margin-left:auto; display:flex; gap:2px; padding:3px; border:1px solid var(--border); border-radius:8px; background:rgba(16,26,40,.72); }
+  .lang-switch a { color:var(--faint); font-size:11px; font-weight:800; padding:4px 8px; border-radius:5px; }
+  .lang-switch a.active { color:#06110d; background:var(--accent); }
+  .back { color:var(--muted); font-size:13px; }
+  main { width:min(980px,calc(100% - 40px)); margin:0 auto; padding:42px 0 70px; }
+  .kicker { color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.16em; }
+  h1 { font-size:clamp(30px,5vw,48px); line-height:1.15; letter-spacing:-.04em; margin:8px 0 6px; }
+  .subtitle { color:var(--faint); margin:0 0 26px; }
+  h2 { font-size:24px; margin:40px 0 14px; }
+  h3 { font-size:16px; margin:0 0 8px; color:#ffd28a; }
+  p, li { color:var(--muted); }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px 23px; margin:12px 0; }
+  .warn { background:#1d1116; border-color:#63303a; }
+  .warn strong { color:#ff9cab; }
+  ol, ul { padding-left:22px; }
+  li { margin:6px 0; }
+  code { background:#0b121c; border:1px solid #233449; border-radius:5px; padding:2px 5px; color:#bfffe8; font-family:Consolas,monospace; font-size:.9em; overflow-wrap:anywhere; }
+  dl { display:grid; grid-template-columns:170px 1fr; gap:7px 16px; margin:0; }
+  dt { color:var(--faint); }
+  dd { margin:0; overflow-wrap:anywhere; }
+  .risk-block { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin:10px 0; }
+  .final-caption { color:#ff9cab; text-align:center; margin:26px 0 12px; }
+  .final-warning { margin-top:18px; padding:28px 18px; border:2px solid #a91e2d; border-radius:14px; background:var(--red-bg); color:var(--red); font-size:clamp(25px,4.5vw,44px); font-weight:900; line-height:1.35; text-align:center; }
+  @media (max-width:640px) { .site-header, main { width:calc(100% - 28px); } dl { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="assets/mousecombo_64.png" alt="Mouse Combo">Mouse Combo</a>
+  <div class="lang-switch"><a class="lang active" href="guide.html">中文</a><a class="lang" href="guide.ja.html">日本語</a><a class="lang" href="guide.en.html">English</a></div>
+  <a class="back" href="index.html">← 返回官网</a>
+  <a class="back" href="index.html#download">下载安装包</a>
+</header>
+<main>
+  <div class="kicker">MOUSE COMBO · 1.5.2</div>
+  <h1>安装与风险声明</h1>
+  <p class="subtitle">版本 1.5.2 · 安装版 · 请在使用前完整阅读</p>
+  <div class="card warn"><p><strong>安装前必读:</strong> 本程序会模拟真实的鼠标点击和键盘按键，并安装全局键盘/鼠标钩子。它可能在真实程序中造成误操作、数据丢失、账号处罚、平台规则冲突或法律风险。请先在安全环境测试，并自行确认使用场景合法合规。</p></div>
+  <h2>1. 运行要求</h2>
+  <div class="card"><ul><li>Windows 10 / Windows 11，64 位。</li><li>使用安装包时不需要安装 Python，也不需要联网。</li><li>软件界面支持中文 / 日本語 / English，可在右上角语言菜单切换；切换后自动重启并保留当前宏。</li><li>安装版启动后会从 GitHub Releases 检查更新，默认静默安装；可在右上角版本菜单关闭自动更新。</li><li>若目标程序以管理员权限运行，本工具通常也需要以管理员权限运行；这不会绕过目标程序的全部安全限制。</li></ul></div>
+  <h2>2. 安装步骤</h2>
+  <div class="card"><ol><li>从可信来源获取 MouseCombo-Setup-1.5.2.exe，运行安装程序。</li><li>在安装程序中完整阅读本说明与风险声明；选择“我接受”继续，选择“我不同意”退出安装。</li><li>选择安装位置和开始菜单文件夹；桌面快捷方式可选。默认安装到 %LOCALAPPDATA%\Programs\MouseCombo。</li><li>安装完成后，从开始菜单或桌面快捷方式启动。</li><li>首次启动后设置开关键（支持鼠标侧键 4/5）和触发方式，先用安全的单步宏测试停止方式。</li><li>在左侧“宏库”填写名称和分类，点击“保存”；单击列表中的宏即可切换，不需要额外窗口。</li><li>若目标程序以管理员权限运行，请也以管理员权限启动 Mouse Combo。</li></ol></div>
+  <h2>3. 数据位置与卸载</h2>
+  <div class="card"><dl><dt>程序目录</dt><dd><code>%LOCALAPPDATA%\Programs\MouseCombo</code></dd><dt>当前配置</dt><dd><code>%APPDATA%\MouseCombo\settings.json</code></dd><dt>宏文件</dt><dd><code>%APPDATA%\MouseCombo\macros\分类\名称.mcombo.json</code></dd><dt>界面状态</dt><dd><code>%APPDATA%\MouseCombo\ui_state.json（含界面语言）</code></dd><dt>异常日志</dt><dd><code>%APPDATA%\MouseCombo\crash.log（仅异常时写入）</code></dd><dt>安装包 SHA256</dt><dd><code>CCA388036A0F0C3D01BCFB8F114DA9DD28EB4D91AEFBFC87DE0376B68623EF7A</code></dd></dl><p>在 Windows“设置 → 应用”中卸载 Mouse Combo，或运行安装目录中的 unins000.exe。标准卸载会删除程序、快捷方式、注册表项和 %APPDATA%\MouseCombo 数据。删除前请备份需要的宏。</p><p>安装程序的许可页提供“我接受 / 我不同意”；不同意并取消安装不会写入程序文件。软件内“使用说明 → 风险声明”中的“不同意并卸载”会调用标准卸载程序，删除程序、快捷方式和本机数据。源码运行模式不会删除源码文件。</p></div>
+  <h2>4. 安全使用建议</h2>
+  <div class="card"><ul><li>只使用你理解并信任的宏动作；不要加载来源不明的宏文件。</li><li>运行前确认焦点窗口和鼠标位置正确；给停止热键留出空间。</li><li>不要在无人值守、金融交易、医疗、交通、工业控制或生产环境中运行。</li><li>长时间高频点击会加速鼠标微动、键盘轴体等硬件损耗。</li><li>如果目标程序禁止自动化或合成输入，请停止使用，而不是绕过其安全机制。</li><li>定期备份重要数据和宏文件；本程序不提供数据恢复服务。</li></ul></div>
+  <h2>5. 代码签名与验证</h2>
+  <div class="card">
+    <p>主程序 MouseCombo.exe 和安装包 MouseCombo-Setup-1.5.2.exe 均使用项目自签名代码证书签名，并带时间戳。该证书不是公共 CA 证书，Windows 首次运行仍可能显示“未知发布者”或 SmartScreen 提示。</p>
+    <p><code>SHA256: 9778EDB71B9D337AF1DAEAEEACB7B59F6A819C669BE7BCF0D5D874928DB9DCC7</code></p>
+    <p>公钥证书随安装包提供，也可从本站下载。只有在核对官网安装包 SHA256 并确认来源后，才建议导入当前用户的“受信任的根证书颁发机构”；导入后 Get-AuthenticodeSignature 状态应变为 Valid。</p>
+    <p>安装器生成的 unins000.exe 不单独签名；签名证书私钥不在安装包或本网站中。</p>
+    <p><a href="downloads/MouseCombo-CodeSigning.cer">下载公钥证书</a></p>
+  </div>
+  <h2>6. 风险声明</h2>
+  <div class="card warn"><p>本程序通过全局键盘钩子监听开关键，并使用 Windows SendInput 模拟鼠标点击和键盘按键。它会在真实系统中产生真实输入，可能影响其他程序、系统状态或第三方服务。请在使用前完整阅读以下风险；安装、运行或使用本程序，即表示你已理解并自愿承担全部相关风险。以下风险包括但不限于：</p></div>
+  <section class="risk-block"><h3>一、法律、法规与平台规则风险</h3><ul><li>可能违反你所在国家或地区的法律、法规、监管要求、行业规范或合同约定。</li><li>可能违反游戏、社交平台、电商平台、办公系统等服务条款，导致警告、限制、封号、扣分、资产冻结或法律纠纷。</li><li>将本工具用于游戏作弊、代练、刷量、虚假流量、抢购、垃圾信息、欺诈、绕过风控/身份验证、未经授权操纵他人设备等行为，可能承担民事、行政甚至刑事责任。</li><li>你应自行确认使用场景合法合规；项目作者不授权、不鼓励也不支持任何违法或侵权用途。</li></ul></section><section class="risk-block"><h3>二、误操作、数据与财产损失风险</h3><ul><li>模拟输入会在当前光标位置或当前焦点窗口真实生效，可能误点按钮、误关程序、误删文件、误发消息、误付款或造成交易错误。</li><li>宏运行期间如果焦点、光标、窗口位置或输入法状态变化，动作可能发送到错误的目标；这些操作通常无法撤销。</li><li>高频点击或按键可能触发目标软件中的危险操作、快捷键或级联宏，造成不可恢复的数据或财产损失。</li><li>请勿在医疗、交通、工业控制、金融交易、生产设备或其他高风险场景中使用本工具。</li></ul></section><section class="risk-block"><h3>三、账号、虚拟资产与第三方损失风险</h3><ul><li>目标平台可能检测合成输入并采取封禁、限制、回档、清空虚拟资产等措施。</li><li>使用本工具造成的账号、装备、积分、余额、交易机会或其他虚拟/现实资产损失，由使用者自行承担。</li><li>若你的操作影响他人账号、设备、网络或数据，你可能需要独立承担对第三方的赔偿责任。</li></ul></section><section class="risk-block"><h3>四、系统、软件与兼容性风险</h3><ul><li>全局键盘钩子和模拟输入可能与反作弊程序、杀毒软件、安全防护、远程桌面、输入法、无障碍工具或其他键鼠宏软件冲突。</li><li>安全软件可能误报、拦截、隔离或删除本程序；本程序无法保证在所有安全策略下正常运行。</li><li>程序可能因权限、系统更新、驱动、资源不足或第三方拦截而崩溃、卡死、无法启动或失效；合成按键可能短暂卡住，鼠标按键可能保持按下状态。</li><li>在极少数情况下，底层输入注入或驱动/系统交互可能导致系统不稳定，甚至需要重启。</li><li>本项目不保证与任何特定游戏、软件、硬件、Windows 版本或输入法兼容。</li></ul></section><section class="risk-block"><h3>五、权限与本地安全风险</h3><ul><li>为实现对管理员窗口的输入，你可能需要以管理员身份运行本程序；这也会扩大程序被滥用或误操作时的影响范围。</li><li>宏文件是本地 JSON 文件，可能被其他程序或用户读取、修改或替换。只应加载你信任来源的宏文件，并检查其动作内容。</li><li>本程序不能替代杀毒软件、备份、权限隔离或其他安全措施。</li></ul></section><section class="risk-block"><h3>六、隐私与数据风险</h3><ul><li>宏、热键、时间参数、分类和名称会以明文形式保存在本机 %APPDATA%\MouseCombo 目录中。</li><li>同一账户或被授权访问磁盘的其他用户可能读取、复制或修改这些文件；分享宏文件前请注意其中可能包含的个人信息或操作习惯。</li><li>崩溃日志可能包含本地路径、异常信息和时间等排错数据，不会自动上传；本程序不包含联网遥测，但无法保证经第三方修改或重新打包后的版本行为。</li><li>使用前请自行备份重要数据；本项目不提供数据恢复或备份服务。</li></ul></section><section class="risk-block"><h3>七、精度、时序与可靠性风险</h3><ul><li>界面中的 0.001 ms（1 µs）是输入和内部计时步进，不代表真实输入事件能精确到微秒。Windows 调度、CPU 占用、USB 回报率、目标程序、输入法和安全软件都会造成延迟、抖动、丢帧或重复。</li><li>本工具不适合对时序、安全或可靠性有严格要求的场景；任何精度说明都不构成性能保证。</li><li>高频运行时 CPU 占用和耗电会上升，可能影响其他程序的响应。</li></ul></section><section class="risk-block"><h3>八、硬件损耗与使用环境风险</h3><ul><li>长时间高频点击或按键会加速鼠标微动开关、键盘轴体或其他硬件的磨损。</li><li>宏可能在无人值守时持续运行；离开电脑前请停止宏或关闭程序。</li><li>台式机、笔记本、虚拟机、远程桌面和移动设备上的行为可能不同，请先在安全环境中测试。</li></ul></section><section class="risk-block"><h3>九、第三方组件、分发与供应链风险</h3><ul><li>本程序为自签名便携 EXE（不是公共 CA 信任签名），Windows SmartScreen 或安全软件可能提示风险；请只从可信来源获取，并自行核对文件哈希和签名证书。</li><li>本程序使用 Python、Tk 及 PyInstaller 等第三方组件，其许可证和安全性由各自项目负责。</li><li>任何人对本程序的修改、重新打包、二次分发或捆绑行为，均可能改变其行为与风险；原作者不对这些版本负责。</li></ul></section><section class="risk-block"><h3>十、无担保与责任限制</h3><ul><li>本程序按“现状”提供，不承诺适销性、特定用途适用性、无错误、不中断或绝对安全。</li><li>在适用法律允许的最大范围内，项目作者和分发者不对因安装、使用或无法使用本程序造成的任何直接、间接、附带、特殊或惩罚性损害承担责任，包括但不限于数据丢失、设备损坏、账号处罚、利润损失和第三方索赔。</li><li>如果你不同意上述任何内容，请立即停止安装和使用，并删除本程序及其配置文件。</li></ul></section>
+  <p class="final-caption">如不同意上述任何内容，请立即停止安装和使用，并删除本程序及其配置文件。</p>
+  <div class="final-warning">本项目仅供学习参考，不得用于任何违法行为</div>
+</main>
+</body>
+</html>
