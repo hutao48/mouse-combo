@@ -36,8 +36,8 @@
       "支持任意普通键与 Ctrl / Alt / Shift 组合：字母、数字、F1–F24、方向键、小键盘、符号键、媒体键等。":
         "通常キーと Ctrl / Alt / Shift 併用に対応：英数字、F1–F24、矢印、テンキー、記号、メディアキーなど。",
       "0.001 ms 计时步进": "0.001 ms の計時刻み",
-      "时间输入、存储和等待调度以 1 µs 为步进，内部使用整数纳秒和绝对 deadline，减少累计漂移。":
-        "入力・保存・待機スケジューリングは 1 µs 刻み。内部は整数ナノ秒と絶対 deadline を使用し、累積ドリフトを抑えます。",
+      "整个动作循环在原生 C helper 中完成绝对等待和 SendInput，并释放 Python GIL；绝对周期时间线、20 ms 末尾忙等、Time-Critical/MMCSS 减少累计漂移。以管理员运行可临时使用实时优先级。实际物理输入仍受 Windows、目标程序和 USB 回报率限制。":
+        "アクションループ全体をネイティブ C ヘルパーで実行し、絶対待機と SendInput の間で Python GIL を解放します。絶対周期タイムライン、最後 20 ms のビジーウェイト、Time-Critical/MMCSS で累積ドリフトを抑えます。管理者実行時は一時的にリアルタイム優先度を使用します。実際の物理入力は Windows、対象アプリ、USB ポーリングレートの影響を受けます。",
       "按住循环 / 按下切换": "押してループ / 押して切替",
       "设置页 · 主题与字体": "設定ページ · テーマとフォント",
       "跟随系统 / 浅色 / 深色主题；内置 zh-cn.ttf，也可切换系统字体、8–12 pt 字号和自定义字体颜色。语言、自动更新与安全选项也集中在设置页。": "システム連動 / ライト / ダークテーマ。内蔵 zh-cn.ttf のほか、システムフォント、8～12 pt の文字サイズ、カスタム文字色を選べます。言語・自動更新・安全設定も設定ページにまとめました。",
@@ -120,7 +120,7 @@
         "上記のいずれかに同意できない場合は、直ちにインストールと使用を中止し、本プログラムと設定ファイルを削除してください。",
       "本项目仅供学习参考，不得用于任何违法行为":
         "本プロジェクトは学習参考用です。いかなる違法行為にも使用しないでください。",
-      "Mouse Combo v1.5.4 · 本地运行 · 不收集数据": "Mouse Combo v1.5.4 · ローカル実行 · データ収集なし",
+      "Mouse Combo v1.5.5 · 本地运行 · 不收集数据": "Mouse Combo v1.5.5 · ローカル実行 · データ収集なし",
       "GitHub": "GitHub",
       "Mouse Combo 图标": "Mouse Combo アイコン",
       "Mouse Combo 主界面：左侧宏库、每步独立计时和宏步骤表格":
@@ -161,8 +161,8 @@
       "支持任意普通键与 Ctrl / Alt / Shift 组合：字母、数字、F1–F24、方向键、小键盘、符号键、媒体键等。":
         "Any normal key with Ctrl / Alt / Shift: letters, digits, F1–F24, arrows, numpad, symbols, media keys and more.",
       "0.001 ms 计时步进": "0.001 ms timing step",
-      "时间输入、存储和等待调度以 1 µs 为步进，内部使用整数纳秒和绝对 deadline，减少累计漂移。":
-        "Input, storage and wait scheduling use a 1 µs step. Integer nanoseconds and absolute deadlines reduce accumulated drift.",
+      "整个动作循环在原生 C helper 中完成绝对等待和 SendInput，并释放 Python GIL；绝对周期时间线、20 ms 末尾忙等、Time-Critical/MMCSS 减少累计漂移。以管理员运行可临时使用实时优先级。实际物理输入仍受 Windows、目标程序和 USB 回报率限制。":
+        "The complete action loop runs in a native C helper: the absolute wait and SendInput happen with the Python GIL released. An absolute cycle timeline, a 20 ms final spin and Time-Critical/MMCSS scheduling reduce accumulated drift. Running as administrator temporarily enables real-time priority. Real physical input is still limited by Windows, the target app and USB polling.",
       "按住循环 / 按下切换": "Hold to loop / press to toggle",
       "设置页 · 主题与字体": "Settings · theme & fonts",
       "跟随系统 / 浅色 / 深色主题；内置 zh-cn.ttf，也可切换系统字体、8–12 pt 字号和自定义字体颜色。语言、自动更新与安全选项也集中在设置页。": "Follow system / light / dark themes; bundled zh-cn.ttf or a system font; 8–12 pt sizes and a custom font color. Language, automatic updates and safety options are in the same settings page.",
@@ -242,7 +242,7 @@
         "If you do not agree with any of the above, stop installing and using the program and delete it and its configuration files.",
       "本项目仅供学习参考，不得用于任何违法行为":
         "This project is for learning and reference only and must not be used for any illegal activity.",
-      "Mouse Combo v1.5.4 · 本地运行 · 不收集数据": "Mouse Combo v1.5.4 · Local · No data collection",
+      "Mouse Combo v1.5.5 · 本地运行 · 不收集数据": "Mouse Combo v1.5.5 · Local · No data collection",
       "GitHub": "GitHub",
       "Mouse Combo 图标": "Mouse Combo icon",
       "Mouse Combo 主界面：左侧宏库、每步独立计时和宏步骤表格":
