@@ -92,7 +92,7 @@
       "大小": "サイズ",
       "↓ 下载安装包": "↓ インストーラーをダウンロード",
       "安装与风险说明": "インストールとリスク",
-      "安装版默认从 GitHub Releases 检测新版本并静默更新；可在右上角版本菜单关闭。": "インストール版は GitHub Releases から新バージョンを確認し、既定でサイレント更新します。右上のバージョンメニューから無効にできます。",
+      "安装版默认从 GitHub Releases 检测更新，下载时显示实时进度/网速/剩余时间，校验完成后自动安装、清理旧版残留并打开新版本。": "インストール版は GitHub Releases から更新を確認し、ダウンロード中は進捗・速度・残り時間を表示します。検証後に自動インストールし、旧版の残骸を整理して新バージョンを開きます。",
       "项目自签名证书（非公共 CA）· 首次运行可能提示未知发布者": "プロジェクトの自己署名証明書（公開 CA ではありません）· 初回起動時に不明な発行元と表示される場合があります",
       "下载公钥证书": "公開証明書をダウンロード",
       "签名与验证说明": "署名と検証の説明",
@@ -120,7 +120,7 @@
         "上記のいずれかに同意できない場合は、直ちにインストールと使用を中止し、本プログラムと設定ファイルを削除してください。",
       "本项目仅供学习参考，不得用于任何违法行为":
         "本プロジェクトは学習参考用です。いかなる違法行為にも使用しないでください。",
-      "Mouse Combo v1.5.5 · 本地运行 · 不收集数据": "Mouse Combo v1.5.5 · ローカル実行 · データ収集なし",
+      "Mouse Combo v1.5.6 · 本地运行 · 不收集数据": "Mouse Combo v1.5.6 · ローカル実行 · データ収集なし",
       "GitHub": "GitHub",
       "Mouse Combo 图标": "Mouse Combo アイコン",
       "Mouse Combo 主界面：左侧宏库、每步独立计时和宏步骤表格":
@@ -214,7 +214,7 @@
       "大小": "Size",
       "↓ 下载安装包": "↓ Download installer",
       "安装与风险说明": "Install & risk guide",
-      "安装版默认从 GitHub Releases 检测新版本并静默更新；可在右上角版本菜单关闭。": "The installed edition checks GitHub Releases and updates silently by default. Disable it from the version menu in the top-right.",
+      "安装版默认从 GitHub Releases 检测更新，下载时显示实时进度/网速/剩余时间，校验完成后自动安装、清理旧版残留并打开新版本。": "The installed edition checks GitHub Releases and updates silently by default. Disable it from the version menu in the top-right.",
       "项目自签名证书（非公共 CA）· 首次运行可能提示未知发布者": "Project self-signed certificate (not a public CA) · Windows may show Unknown publisher on first run",
       "下载公钥证书": "Download public certificate",
       "签名与验证说明": "Signing & verification",
@@ -242,7 +242,7 @@
         "If you do not agree with any of the above, stop installing and using the program and delete it and its configuration files.",
       "本项目仅供学习参考，不得用于任何违法行为":
         "This project is for learning and reference only and must not be used for any illegal activity.",
-      "Mouse Combo v1.5.5 · 本地运行 · 不收集数据": "Mouse Combo v1.5.5 · Local · No data collection",
+      "Mouse Combo v1.5.6 · 本地运行 · 不收集数据": "Mouse Combo v1.5.6 · Local · No data collection",
       "GitHub": "GitHub",
       "Mouse Combo 图标": "Mouse Combo icon",
       "Mouse Combo 主界面：左侧宏库、每步独立计时和宏步骤表格":

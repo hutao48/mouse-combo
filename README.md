@@ -2,7 +2,7 @@
 
 **A high-precision mouse and keyboard macro tool for Windows 10/11.**
 
-[Website](https://hutao48.github.io/mouse-combo/) · [Download installer](https://hutao48.github.io/mouse-combo/downloads/MouseCombo-Setup-1.5.5.exe) · [Install & risk guide](https://hutao48.github.io/mouse-combo/guide.en.html#signing) · [Public signing certificate](https://hutao48.github.io/mouse-combo/downloads/MouseCombo-CodeSigning.cer)
+[Website](https://hutao48.github.io/mouse-combo/) · [Download installer](https://hutao48.github.io/mouse-combo/downloads/MouseCombo-Setup-1.5.6.exe) · [Install & risk guide](https://hutao48.github.io/mouse-combo/guide.en.html#signing) · [Public signing certificate](https://hutao48.github.io/mouse-combo/downloads/MouseCombo-CodeSigning.cer)
 
 Mouse Combo is a local, offline macro utility with a single toggle hotkey, per-step timing, an inline macro library, and full keyboard repeat. The application interface can be switched between **Chinese, Japanese and English** from the language menu in the top-right corner. The website uses the same three-language switch; open `?lang=ja` or `?lang=en` for a direct localized link.
 
@@ -48,7 +48,7 @@ The updater only contacts the GitHub API and GitHub release assets. It does not 
 
 ## Code signing
 
-The v1.5.5 application and installer are Authenticode-signed and timestamped with a **project self-signed code-signing certificate**. This is a real signature, but it is **not issued by a public CA**: Windows may still show “Unknown publisher” and SmartScreen will not grant reputation until the certificate is trusted on that machine.
+The v1.5.6 application and installer are Authenticode-signed and timestamped with a **project self-signed code-signing certificate**. This is a real signature, but it is **not issued by a public CA**: Windows may still show “Unknown publisher” and SmartScreen will not grant reputation until the certificate is trusted on that machine.
 
 ```text
 Subject:  CN=Mouse Combo, O=Mouse Combo, C=JP
@@ -65,7 +65,7 @@ Only trust the certificate after verifying the official SHA256. A CA-issued OV/E
 
 ## Installation
 
-1. Download `MouseCombo-Setup-1.5.5.exe` from the website or the [downloads](downloads/) folder.
+1. Download `MouseCombo-Setup-1.5.6.exe` from the website or the [downloads](downloads/) folder.
 2. Run the installer. The license page contains the complete installation guide and risk statement; choose **I accept** to continue, or **I do not accept** to exit without installing.
 3. The default per-user install location is `%LOCALAPPDATA%\Programs\MouseCombo`; administrator rights are not required.
 4. Launch Mouse Combo from the Start Menu or the optional desktop shortcut.
@@ -92,7 +92,7 @@ The in-app **Help → Risk statement → Do not accept and uninstall** action in
 
 Each step stores `hold_ms` and `interval_ms` independently. The next step starts after the current step is released plus its own interval. Wheel steps have no hold phase. The total cycle is the sum of all step durations (wheel hold excluded).
 
-Starting with v1.5.5, the complete action loop runs in a bundled native helper (`assets/timing.dll`): the absolute wait and `SendInput` call happen in C while ctypes releases the Python GIL. Every step is scheduled against an **absolute cycle timeline** anchored to QPC, so a late wake-up is absorbed by a shorter following wait instead of shifting every later step. The helper uses a 20 ms final busy-wait, a high-resolution QPC clock and `timeBeginPeriod(1)`; the macro thread uses Time-Critical/MMCSS scheduling, EcoQoS opt-out and an ideal CPU. When launched as administrator, the process temporarily uses `REALTIME_PRIORITY_CLASS` and restores it afterwards. The footer reports the measured maximum wait/injection-call error and the number of deadlines missed by more than 1 ms.
+Starting with v1.5.6, the complete action loop runs in a bundled native helper (`assets/timing.dll`): the absolute wait and `SendInput` call happen in C while ctypes releases the Python GIL. Every step is scheduled against an **absolute cycle timeline** anchored to QPC, so a late wake-up is absorbed by a shorter following wait instead of shifting every later step. The helper uses a 20 ms final busy-wait, a high-resolution QPC clock and `timeBeginPeriod(1)`; the macro thread uses Time-Critical/MMCSS scheduling, EcoQoS opt-out and an ideal CPU. When launched as administrator, the process temporarily uses `REALTIME_PRIORITY_CLASS` and restores it afterwards. The footer reports the measured maximum wait/injection-call error and the number of deadlines missed by more than 1 ms.
 
 `0.001 ms` (1 µs) is the input/display and internal scheduling step. **A user-mode Windows application cannot make physical input timing identical to a preset**: actual delivery is still subject to `SendInput` latency, Windows scheduling, CPU load, USB polling (commonly 125–1000 Hz), the target application and security software. The footer statistic is native wait/injection-call latency, not physical device arrival. Hardware-level determinism requires a real-time OS, a microcontroller or a hardware macro device.
 
