@@ -27,7 +27,7 @@ The **Settings** button in the top-right opens a dedicated settings page:
 - **Font size**: 8–12 pt, applied as a relative scale to the whole UI.
 - **Font color**: follow the theme or choose a custom color with the color picker.
 - **Language**: Chinese / Japanese / English, with automatic restart.
-- **Updates**: current version, GitHub source, automatic silent updates, manual check and GitHub Releases.
+- **Updates**: current version, GitHub source, automatic silent updates, manual check, live progress/speed/ETA, automatic install and restart.
 - **About & safety**: version, config folder, website, risk and uninstall information.
 
 The hotkey, trigger mode, per-step timing and macro library stay on the main window; the settings page only manages global options. Theme and font changes apply after the automatic restart.
@@ -37,10 +37,11 @@ The hotkey, trigger mode, per-step timing and macro library stay on the main win
 Starting with v1.5.2, the installed edition checks **GitHub Releases** about three seconds after launch. Silent updates are enabled by default:
 
 - Source: `https://api.github.com/repos/hutao48/mouse-combo/releases/latest`.
-- A newer release is downloaded in the background. The updater verifies `SHA256SUMS.txt` (or the GitHub asset digest), then starts a hidden PowerShell helper.
-- The helper waits for Mouse Combo to exit, runs the installer with `/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /CLOSEAPPLICATIONS /DIR="<current install dir>"`, and restarts the app on success.
+- A newer release opens a topmost update window with download percentage, downloaded/total size, **real-time speed** and ETA; the Settings → Updates tab shows the same progress bar. Cancel and "continue in background" are available.
+- After download the updater verifies `SHA256SUMS.txt` (or the GitHub asset digest) and installs automatically. A hidden PowerShell helper waits for/force-stops old-version processes, runs `/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /CLOSEAPPLICATIONS /DIR="<current install dir>"`, cleans old setup/`.part`/`.old` cache entries, and reopens the new version.
 - Updates never install while a macro is running; they wait until it stops. Failures are logged to `%APPDATA%\MouseCombo\updates\update.log`, and the same version is not retried automatically for 24 hours.
 - The version button in the top-right can check manually, disable **Automatic silent updates**, or open GitHub Releases.
+- The app is packaged in PyInstaller **onedir** mode so an update does not need to extract the Python runtime into `%TEMP%`; this avoids the transient "Failed to load Python DLL" restart failure.
 - Source-tree runs do not install updates automatically; a manual check opens the Releases page.
 - The installer is still self-signed; SmartScreen may warn even for an automatic update.
 
