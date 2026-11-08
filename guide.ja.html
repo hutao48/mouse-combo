@@ -3,50 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#070c13">
+<meta name="theme-color" content="#000000">
 <title>インストールとリスク声明 · Mouse Combo</title>
 <link rel="icon" href="assets/mousecombo_32.png">
-<style>
-  :root { color-scheme: dark; --bg:#070c13; --card:#101a28; --card2:#0d1622; --text:#f1f6fc; --muted:#aebdd0; --faint:#7f91a8; --accent:#45e0a8; --border:#22334a; --border2:#182638; --red:#ff4054; --red-bg:#2a1117; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:radial-gradient(circle at 20% -10%,rgba(69,224,168,.10),transparent 32rem),var(--bg); color:var(--text); font-family:"Microsoft YaHei UI","Yu Gothic UI","Segoe UI",sans-serif; line-height:1.8; }
-  a { color:var(--accent); text-decoration:none; }
-  a:hover { color:#8df7d2; }
-  .site-header { width:min(980px,calc(100% - 40px)); margin:0 auto; padding:22px 0; display:flex; align-items:center; gap:14px; flex-wrap:wrap; border-bottom:1px solid var(--border2); }
-  .brand { display:flex; gap:10px; align-items:center; color:var(--text); font-weight:900; }
-  .brand img { width:36px; height:36px; border-radius:10px; }
-  .lang-switch { margin-left:auto; display:flex; gap:2px; padding:3px; border:1px solid var(--border); border-radius:8px; background:rgba(16,26,40,.72); }
-  .lang-switch a { color:var(--faint); font-size:11px; font-weight:800; padding:4px 8px; border-radius:5px; }
-  .lang-switch a.active { color:#06110d; background:var(--accent); }
-  .back { color:var(--muted); font-size:13px; }
-  main { width:min(980px,calc(100% - 40px)); margin:0 auto; padding:42px 0 70px; }
-  .kicker { color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.16em; }
-  h1 { font-size:clamp(30px,5vw,48px); line-height:1.15; letter-spacing:-.04em; margin:8px 0 6px; }
-  .subtitle { color:var(--faint); margin:0 0 26px; }
-  h2 { font-size:24px; margin:40px 0 14px; }
-  h3 { font-size:16px; margin:0 0 8px; color:#ffd28a; }
-  p, li { color:var(--muted); }
-  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px 23px; margin:12px 0; }
-  .warn { background:#1d1116; border-color:#63303a; }
-  .warn strong { color:#ff9cab; }
-  ol, ul { padding-left:22px; }
-  li { margin:6px 0; }
-  code { background:#0b121c; border:1px solid #233449; border-radius:5px; padding:2px 5px; color:#bfffe8; font-family:Consolas,monospace; font-size:.9em; overflow-wrap:anywhere; }
-  dl { display:grid; grid-template-columns:170px 1fr; gap:7px 16px; margin:0; }
-  dt { color:var(--faint); }
-  dd { margin:0; overflow-wrap:anywhere; }
-  .risk-block { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin:10px 0; }
-  .final-caption { color:#ff9cab; text-align:center; margin:26px 0 12px; }
-  .final-warning { margin-top:18px; padding:28px 18px; border:2px solid #a91e2d; border-radius:14px; background:var(--red-bg); color:var(--red); font-size:clamp(25px,4.5vw,44px); font-weight:900; line-height:1.35; text-align:center; }
-  @media (max-width:640px) { .site-header, main { width:calc(100% - 28px); } dl { grid-template-columns:1fr; } }
-</style>
+<link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="guide.css">
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html?lang=ja"><img src="assets/mousecombo_64.png" alt="Mouse Combo">Mouse Combo</a>
-  <div class="lang-switch"><a class="lang" href="guide.html">中文</a><a class="lang active" href="guide.ja.html">日本語</a><a class="lang" href="guide.en.html">English</a></div>
-  <a class="back" href="index.html?lang=ja">← サイトへ戻る</a>
-  <a class="back" href="index.html?lang=ja#download">インストーラーをダウンロード</a>
+<header class="guide-header">
+  <div class="guide-nav">
+    <a class="brand" href="index.html?lang=ja"><img src="assets/mousecombo_64.png" alt="Mouse Combo" width="28" height="28"><span>Mouse <em>Combo</em></span></a>
+    <div class="lang-switch"><a class="lang" href="guide.html">中文</a><a class="lang active" href="guide.ja.html">日本語</a><a class="lang" href="guide.en.html">English</a></div>
+    <a class="back" href="index.html?lang=ja">← サイトへ戻る</a>
+    <a class="guide-download" href="index.html?lang=ja#download">インストーラーをダウンロード</a>
+  </div>
 </header>
 <main>
   <div class="kicker">MOUSE COMBO · 1.5.6</div>
@@ -75,5 +45,11 @@
   <p class="final-caption">上記のいずれかに同意できない場合は、直ちにインストールと使用を中止し、本プログラムと設定ファイルを削除してください。</p>
   <div class="final-warning">本プロジェクトは学習参考用です。いかなる違法行為にも使用しないでください。</div>
 </main>
+<footer class="guide-footer">
+  <div class="guide-footer-inner">
+    <span>Mouse Combo v1.5.6 · バージョン 1.5.6 · インストール版 · 使用前に全文をお読みください</span>
+    <span><a href="index.html?lang=ja">サイトへ戻る</a> · <a href="index.html?lang=ja#download">インストーラーをダウンロード</a></span>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex">
+  <title>404 · Mouse Combo</title>
+  <link rel="icon" href="assets/mousecombo_32.png">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="./" aria-label="Mouse Combo 首页">
+        <img src="assets/mousecombo_64.png" alt="Mouse Combo 图标" width="32" height="32">
+        <span>Mouse <em>Combo</em></span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="index.html#features" data-i18n="nav.features">功能</a>
+        <a href="index.html#timing" data-i18n="nav.timing">每步计时</a>
+        <a href="index.html#side-buttons" data-i18n="nav.side">侧键开关键</a>
+        <a href="guide.html" data-i18n="nav.guide">安装与风险</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language / 言語">
+          <button type="button" data-lang="zh" class="is-active" aria-pressed="true">中</button>
+          <button type="button" data-lang="ja" aria-pressed="false">日</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn-primary btn-small" href="index.html#download" data-i18n="nav.download">下载安装包</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="error-page" id="main">
+    <p class="mono error-code">404</p>
+    <h1 data-i18n="notfound.title">这个页面不存在。</h1>
+    <p class="lead" data-i18n="notfound.body">链接可能已经失效，或者地址输入有误。回到首页继续查看 Mouse Combo。</p>
+    <div class="error-actions">
+      <a class="btn btn-primary" href="index.html" data-i18n="notfound.cta">返回首页</a>
+      <a class="text-link" href="guide.html" data-i18n="nav.guide">安装与风险</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="assets/mousecombo_64.png" alt="Mouse Combo 图标" width="28" height="28">
+          <span>Mouse <em>Combo</em></span>
+        </a>
+        <p data-i18n="footer.local">本地运行 · 不收集数据</p>
+      </div>
+      <p class="footer-copy"><span data-i18n="footer.copyright">© 2026 Mouse Combo</span> · <span data-release-version>v1.5.6</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="site-i18n.js"></script>
+</body>
+</html>
