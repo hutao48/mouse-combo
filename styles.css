@@ -1011,6 +1011,13 @@ html.js [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
   .download-aside { padding-left: var(--s-400); }
 }
 
+@media (max-width: 960px) {
+  .nav-links, .nav-actions .nav-cta { display: none; }
+  .nav-actions .lang-switch { display: none; }
+  .menu-toggle { display: block; }
+  .mobile-menu { display: flex; }
+}
+
 @media (max-width: 860px) {
   .site-header { padding: var(--s-100) var(--s-200) 0; }
   .nav-shell { min-height: 56px; padding: var(--s-50) var(--s-75) var(--s-50) var(--s-100); gap: var(--s-200); }
@@ -1133,4 +1140,13 @@ html.js [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
   .error-code { font-size: 60px; line-height: 60px; }
   .error-page h1 { font-size: 36px; line-height: 40px; }
   .error-actions .btn { width: 100%; }
+}
+
+@media (forced-colors: active) {
+  h1.display {
+    background: none;
+    color: CanvasText;
+    -webkit-text-fill-color: CanvasText;
+  }
+  .btn-primary { border: 1px solid ButtonText; }
 }
