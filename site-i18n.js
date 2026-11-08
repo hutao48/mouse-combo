@@ -419,16 +419,22 @@
     });
     const shot = document.querySelector("[data-app-shot]");
     if (shot) {
-      shot.setAttribute(
-        "src",
-        lang === "en" ? "assets/main_en.png" : "assets/main_populated.png"
-      );
+      const screenshots = {
+        zh: "assets/main_populated.png",
+        ja: "assets/main_ja.png",
+        en: "assets/main_en.png",
+      };
+      shot.setAttribute("src", screenshots[lang] || screenshots.zh);
     }
     const meta = META[lang] || META.zh;
-    document.title = meta.title;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description);
-    document.querySelector('meta[property="og:title"]')?.setAttribute("content", meta.title);
-    document.querySelector('meta[property="og:description"]')?.setAttribute("content", meta.description);
+    const isNotFound = Boolean(document.querySelector(".error-page"));
+    document.title = isNotFound ? "404 · Mouse Combo" : meta.title;
+    const description = isNotFound
+      ? (dictionary["notfound.body"] ?? fallback["notfound.body"])
+      : meta.description;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+    document.querySelector('meta[property="og:title"]')?.setAttribute("content", document.title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute("content", description);
     document.documentElement.lang = LANGUAGE_TAG[lang];
     const guide = GUIDE[lang] || GUIDE.zh;
     document.querySelectorAll('a[href^="guide"]').forEach((link) => {
